@@ -30,7 +30,6 @@ public class MemberRepositoryTest {
         assertThat(findMember.getId()).isEqualTo(member.getId());
         assertThat(findMember.getUsername()).isEqualTo(member.getUsername());
         assertThat(findMember).isEqualTo(member);
-        assertThat(findMember).isNotEqualTo(member);
 
     }
 }
