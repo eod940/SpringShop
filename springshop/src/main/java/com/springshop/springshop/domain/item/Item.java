@@ -1,11 +1,12 @@
 package com.springshop.springshop.domain.item;
 
+import com.springshop.springshop.domain.Category;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.ArrayList;
-import java.util.Locale;
+import java.util.List;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
@@ -23,5 +24,6 @@ public class Item {
     private int price;
     private int stockQuantity;
 
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private List<Category> categories = new ArrayList<Category>()
 }
