@@ -25,5 +25,5 @@ public class Item {
     private int stockQuantity;
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
-    private List<Category> categories = new ArrayList<Category>()
+    private List<Category> categories = new ArrayList<Category>();
 }
